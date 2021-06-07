@@ -5,7 +5,7 @@ import styles from './styles';
 const SplashScreen = ({fadeAnim}) => {
   return (
     <Animated.View style={[styles.mainContainer, {opacity: fadeAnim}]}>
-      <Text>EKZERO</Text>
+      <Text style={styles.splaceText}>EKZERO</Text>
     </Animated.View>
   );
 };

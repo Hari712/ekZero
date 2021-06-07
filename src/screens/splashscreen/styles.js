@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { Colors } from '../../theme'
+import {Colors, FontSizes} from '../../theme'
 
 export default StyleSheet.create({
   mainContainer: {
@@ -8,4 +8,8 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: Colors.white
   },
+  splaceText: {
+    fontSize: FontSizes.xlarger,
+    color: Colors.themeColor
+  }
 })

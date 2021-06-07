@@ -1,5 +1,5 @@
 export const Colors = {
-  themeColor: '#3BE5E6',
+  themeColor: 'red',
   white: '#ffffff',
   buttonBorder: '#302F2F',
   black: '#000000',

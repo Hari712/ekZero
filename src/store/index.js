@@ -2,7 +2,7 @@ import {applyMiddleware, combineReducers, createStore} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import {rootSaga} from './saga';
 import {persistStore} from 'redux-persist';
-import timer from '../redux';
+import form from '../redux';
 
 const initialState = {};
 
@@ -11,7 +11,7 @@ const sagaMiddleware = createSagaMiddleware();
 const middleware = [sagaMiddleware];
 
 const appReducer = combineReducers({
-  timer,
+  form,
 });
 
 const rootReducer = (state, action) => appReducer(state, action);

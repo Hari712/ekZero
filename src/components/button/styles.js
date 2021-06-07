@@ -14,10 +14,10 @@ export default StyleSheet.create({
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-
+    backgroundColor: Colors.lightGray
   },
   btnText: {
     fontSize: FontSizes.medium,
-    color: Colors.buttonTextColor,
+    color: Colors.black,
   }
 })

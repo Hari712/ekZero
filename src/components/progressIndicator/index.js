@@ -1,8 +1,9 @@
 import React from 'react';
 import {Text, View, FlatList} from 'react-native';
 import styles from './styles';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const ProgressIndicator = ({activeNum, totalNum = 4}) => (
+const ProgressIndicator = ({activeNum, totalNum = 3}) => (
     <View style={styles.stepper}>
     <FlatList
       data={Array.apply(null, new Array(totalNum)).map(function(el, i) {return ++i + ""})}
@@ -20,7 +21,7 @@ const ProgressIndicator = ({activeNum, totalNum = 4}) => (
           ) : item < activeNum ? (
             <View style={styles.steps}>
               <View style={styles.stepperblackcircle}>
-                    <Text style={styles.steppernum}>{item}</Text>
+                  <MaterialIcons style={styles.steppernum} name={'done'} />
               </View>
               {item == totalNum ? null : <View style={styles.linestepper} />}
             </View>

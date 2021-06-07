@@ -16,7 +16,7 @@ const App = () => (
       <PersistGate loading={null} persistor={persistor}>
         <StatusBar
           animated
-          backgroundColor={Colors.white}
+          backgroundColor={Colors.lightGray}
           barStyle="dark-content"
         />
         <SafeAreaProvider>

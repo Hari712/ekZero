@@ -12,17 +12,21 @@ export default StyleSheet.create({
       marginVertical: wp(2)
     },
     radioStyle: {
-        display: 'flex',
-        height: hp(5)
+        height: hp(10)
     },
     radioTextStyle: {
         fontSize: FontSizes.large,
         alignItems: 'center',
+        marginRight: wp(2)
     },
     radioButtonView: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginRight: wp(1)
+        marginRight: wp(5)
+    },
+    errorMsg: {
+        color: Colors.themeColor,
+        marginBottom: hp(2),
     }
 });

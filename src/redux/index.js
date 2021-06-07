@@ -1,11 +1,37 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {persistReducer} from 'redux-persist';
-import {FORM_DATA_SUBMIT, FORM_DATA_SUCCESS} from './types';
-import {getFormDataSuccess, getFormSubmitRequest} from './reducers';
+import {CLEAR_STORED_DATA, FORM_DATA_FAIL, FORM_DATA_SUBMIT, FORM_DATA_SUCCESS} from './types';
+import {getClearFormData, getFormDataSuccess, getFormSubmitError, getFormSubmitRequest} from './reducers';
 
-const initialState = {};
+const initialState = {
+  interestData: [
+      {
+         id: 0,
+         value: 'HTML',
+      },
+      {
+          id: 1,
+          value: 'PHP',
+      },
+      {
+          id: 2,
+          value: 'JAVASCRIPT',
+      }
+    ],
+    genderData: [
+        {
+        id: 0,
+        value: 'Male',
+        },
+        {
+        id: 1,
+        value: 'Female',
+        }],
+    formData: {},
+    clearData: false
+};
 
-function timerReducer(state = initialState, action) {
+function formReducer(state = initialState, action) {
   const {type} = action;
 
   switch (type) {
@@ -13,14 +39,18 @@ function timerReducer(state = initialState, action) {
       return getFormSubmitRequest(state, action);
     case FORM_DATA_SUCCESS:
       return getFormDataSuccess(state, action);
+      case FORM_DATA_FAIL:
+      return getFormSubmitError(state, action);
+      case CLEAR_STORED_DATA:
+          return getClearFormData(state, action);
     default:
       return state;
   }
 }
 
 const persistConfig = {
-  key: 'timer',
+  key: 'form',
   storage: AsyncStorage,
 };
 
-export default persistReducer(persistConfig, timerReducer);
+export default persistReducer(persistConfig, formReducer);

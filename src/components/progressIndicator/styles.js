@@ -6,7 +6,7 @@ export default StyleSheet.create({
       display: 'flex',
    justifyContent: 'center',
     height: hp(8),
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.lightGray,
   },
   steps: {
     flexDirection: 'row',
@@ -15,7 +15,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   linestepper: {
-    width: wp(3),
+    width: wp(20),
     height: 1,
     backgroundColor: 'black',
   },
@@ -36,7 +36,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   activenum: {
-    backgroundColor: 'red',
+    backgroundColor: Colors.themeColor,
     width: wp(12),
     height: wp(12),
     borderRadius: 50 / 2,
@@ -45,18 +45,13 @@ export default StyleSheet.create({
   },
   stepperblackcircle: {
     backgroundColor: 'black',
-    width: wp(8),
-    height: wp(8),
+    width: wp(10),
+    height: wp(10),
     borderRadius: 50 / 2,
     justifyContent: 'center',
   },
   steppernum: {
     color: Colors.white,
     textAlign: 'center',
-  },
-  stepperheading: {
-    color: 'red',
-    textAlign: 'center',
-    width: wp(35),
   },
 });
