@@ -1,0 +1,14 @@
+com/ekzero/MainActivity.java
+ com.ekzero.MainActivity
+com/ekzero/BuildConfig.java
+ com.ekzero.BuildConfig
+com/ekzero/MainApplication.java
+ com.ekzero.MainApplication
+ com.ekzero.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/ekzero/ReactNativeFlipper.java
+ com.ekzero.ReactNativeFlipper
+ com.ekzero.ReactNativeFlipper$1
+ com.ekzero.ReactNativeFlipper$2
+ com.ekzero.ReactNativeFlipper$2$1
